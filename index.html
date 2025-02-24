@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kjplStudio - KJPL IDE</title>
+    <link rel="stylesheet" href="codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>kjplStudio</h1>
+        <p>IDE & Compiler for the King James Programming Language</p>
+    </header>
+    <div class="container">
+        <div class="editor-section">
+            <h2>Code Editor</h2>
+            <textarea id="editor">FAITH = "Mustard_Seed"
+IF FAITH >= "Mustard_Seed" THEN
+    PRINT("Mountain moved!")
+ELSE
+    PRINT("Faith too small")
+ENDIF
+REVELATION_CASE FAITH
+    WHEN "Mustard_Seed" THEN PRINT("Faith sufficient")
+    ELSE PRINT("Increase thy faith")
+ENDCASE
+DEFINE GREET AS FUNCTION
+    PRINT("Peace be with you")
+ENDFUNCTION
+CALL GREET</textarea>
+        </div>
+        <div class="controls">
+            <button id="runBtn">Run</button>
+        </div>
+        <div class="output-section">
+            <h2>Output</h2>
+            <pre id="output"></pre>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 kjplStudio | Inspired by the KJV Bible</p>
+    </footer>
+    <script src="codemirror/lib/codemirror.js"></script>
+    <script src="codemirror/mode/kjpl/kjpl.js"></script>
+    <script src="kjplCompiler.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
